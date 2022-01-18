@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>zadanie1</title>
+    <script type="text/javascript">
+        function dodawanie() {
+            const a = parseFloat(liczba1.value);
+            const b = parseFloat(liczba2.value);
+            wynik.innerHTML = a + b;
+        }
+
+        function odejmowanie() {
+            const a = parseFloat(liczba1.value);
+            const b = parseFloat(liczba2.value);
+            wynik.innerHTML = a - b;
+        }
+
+        function mnozenie() {
+            const a = parseFloat(liczba1.value);
+            const b = parseFloat(liczba2.value);
+            wynik.innerHTML = a * b;
+        }
+
+        function dzielenie() {
+            const a = parseFloat(liczba1.value);
+            const b = parseFloat(liczba2.value);
+            wynik.innerHTML = a / b;
+        }
+
+        function potęgowanie() {
+            const a = parseFloat(liczba1.value);
+            const b = parseFloat(liczba2.value);
+            wynik.innerHTML = a ** b;
+        }
+    </script>
+</head>
+
+<body>
+    liczba1<input id="liczba1"><br> liczba2
+    <input id="liczba2"><br>
+    <input type="button" value="dodawanie" oneclick="dodawanie()">
+    <input type="button" value="odejmowanie" oneclick="odejmowanie()">
+    <input type="button" value="mnozenie" oneclick="mnozenie()">
+    <input type="button" value="dzielenie" oneclick="dzielenie()"><br> wynik:
+    <p id="wynik"></p>
+
+
+</body>
+
+</html>
