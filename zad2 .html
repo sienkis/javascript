@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie2</title>
+
+</head>
+<body>
+
+  <p style="font-size: 30px;"> <b> JavaScript Zmiana tla RGB</b></p> <br>
+    <input type="range" id="R" min=1 max=255>
+    <span id="Red"></span> <br>
+
+    <input type="range" id="G" min=1 max=255>
+    <span id="Green"></span> <br>
+
+    <input type="range" id="B" min=1 max=255>
+    <span id="Blue"></span> <br>
+
+    <p id="wynik"></p>
+
+    <style>
+        #wynik{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</body>
+</html>
+
+<script>
+    const zmien=()=>
+    {
+    Red.innerHTML = R.value;
+    Green.innerHTML = G.value;
+    Blue.innerHTML = B.value;
+
+    wynik.style.background = "rgb("+R.value+","+G.value+","+B.value+")";
+    }
+    R.addEventListener("change",zmien);
+    G.addEventListener("change",zmien);
+    B.addEventListener("change",zmien);
+
+</script>

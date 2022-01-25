@@ -1,0 +1,39 @@
+<html>
+<head>
+ <meta charset="Utf-8">
+ </head>
+
+ <script language="JavaScript">
+const oblicz =()=>
+{
+if(rok.value=="")
+{
+alert("Pole nie moze byc puste");
+rok.style="border:1px red solid;"
+}
+else
+{
+rok.style="border:default;"
+}
+const r = parseInt(rok.value);
+if((r%4==0 && r%100!=0) || r%400==0)
+{
+wynik.innerHTML="Rok przestepny";
+}
+else
+{
+wynik.innerHTML="Rok zwykly";
+}
+}
+</script>
+ <body>
+<h2> Czy rok jest przystępny ? </h2>
+Podaj rok  <input type="number" id="rok">
+<input type="button" value="wyswietl" onclick="oblicz()">
+<p id="wynik"> </p>
+
+
+
+
+</body>
+</html>
