@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<html>
+<head>
+ <meta charset="utf-8">
+ <title> </title>
+</head>
+<body>
+ax<sup>2</sup> + bx + c = 0 <br>
+a = <input id="polea"> <br>
+b = <input id="poleb"> <br>
+c = <input id="polec"> <br>
+<input type="button" value="oblicz" onclick="oblicz()">
+<p id="wynik"></p>
+<script>
+    const oblicz=()=>
+    {
+        const a = parseInt(polea.value);
+        const b = parseInt(poleb.value);
+        const c = parseInt(polec.value);
+        const d = b**2 - 4 *a * c;
+        const x0 = 0;
+        const x1 = 0;
+        const x2 = 0;
+        if(d < 0){
+            wynik.innerHTML = "brak rozwiązania, delta < 0";
+        } else if(d == 0){
+            x0 = -b/(2a);
+            wynik.innerHTML = "x0 = " + x0;
+        }else if(d > 0){
+            x1 = (-b - Math.sqrt(d))/(2a);
+            x2 = (-b + Math.sqrt(d))/(2*a);
+            wynik.innerHTML = "x1 = " + x1 + "<br> x2 = " + x2;
+        }
+    }
+    </script>
+ </body>
+</html>

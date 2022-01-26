@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<html>
+<head>
+ <meta charset="utf-8">
+ <title> </title>
+</head>
+<body>
+<input id="liczba">
+<select id="lista">
+<option value="kmtom">kilometry na mile</option>
+<option value="mtokm">Mile na kilometry</option>
+<option value="cmtoc">Centymetry na cale</option>
+<option value="ctocm">Cale na centymetry</option>
+<option value="fttom">stopy na metry</option>
+<option value="mtoft">metry na stopy</option>
+<option value="ltog">Litry na galony</option>
+<option value="gtol">galony na litry</option>
+<option value="ftokg">funty na kilogramy</option>
+<option value="kgtof">kilogramy na funty</option>
+</select><input type="button" value="Przelicz" onclick="przelicz()">
+<p id="wynik"></p>
+ </body>
+</html>
+<script>
+const przelicz=()=>
+{
+	const wartosc = parseFloat(liczba.value);
+	const wybor = lista.value;
+	if(wybor == "kmtom"){
+		wynik.innerHTML = wartosc * 0.62;
+	}else if(wybor == "mtokm"){
+		wynik.innerHTML = wartosc * 1.61;
+	}else if(wybor == "cmtoc"){
+		wynik.innerHTML = wartosc * 0.39;
+	}else if(wybor == "ctocm"){
+		wynik.innerHTML = wartosc * 2.54;
+	}else if(wybor == "fttom"){
+		wynik.innerHTML = wartosc * 0.3;
+	}else if(wybor == "mtoft"){
+		wynik.innerHTML = wartosc * 3.28;
+	}else if(wybor == "ltog"){
+		wynik.innerHTML = wartosc * 0.26;
+	}else if(wybor == "gtol"){
+		wynik.innerHTML = wartosc * 3.79;
+	}else if(wybor == "ftokg"){
+		wynik.innerHTML = wartosc * 0.45;
+	}else if(wybor == "kgtof"){
+		wynik.innerHTML = wartosc * 2.2;
+	}
+}
+</script>
